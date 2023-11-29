@@ -199,7 +199,8 @@ let populateData = function (url, city_name) {
       }
 
       let date = new Date();
-       if (date.getHours() >= 6 && date.getHours() <= 18) {
+      if (date.getHours() >= 6 && date.getHours() <= 18) {
+        $('.hide').css('display', 'none');
 
         if (response["weather"]["0"]["main"].includes("Smoke") || response["weather"]["0"]["main"].includes("Haze") || response["weather"]["0"]["main"].includes("Mist")) {
           $('#smoke').css('display', 'block');
@@ -218,6 +219,7 @@ let populateData = function (url, city_name) {
         }
       }
       else {
+        $('.hide').css('display', 'none');
 
         if (response["weather"]["0"]["main"].includes("Smoke") || response["weather"]["0"]["main"].includes("Haze") || response["weather"]["0"]["main"].includes("Mist")) {
           $('#smoke').css('display', 'block');
