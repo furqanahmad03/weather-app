@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+
+.checkbox:checked+.checkbox-label .rounded-full {
+  @apply -translate-x-4;
+}
+.dark{
+  background-color: #2d2d2d;
+}
+
+@tailwind utilities;
